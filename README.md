@@ -8,7 +8,8 @@ It's easier to use than the old TimePicker, and looks awesome, too.
 
 Use
 ====
-Import the library project to your app
+Import the library project to your app, then
+
 Insert in the layout file:
 ```xml
     <com.icechen1.microwavetimepicker.TimePicker 
