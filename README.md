@@ -64,3 +64,5 @@ To Do
 -A Light Theme that works in Holo.Light
 
 -Auto Locale Detection
+
+Released under the Apache License
