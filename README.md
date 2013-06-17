@@ -21,8 +21,10 @@ Insert in the layout file:
 
 where
 timepicker:format_24="true|false"
-true: 24H format
-false: 12H format(AM/PM)
+
+<b>true</b>: 24H format
+
+<b>false</b>: 12H format(AM/PM)
 
 To use the view as a dialog, do the following:
 
@@ -61,8 +63,8 @@ See the sample project for more information
 
 To Do
 =====
--A Light Theme that works in Holo.Light
-
--Auto Locale Detection
+- [x] Make it work on Android 2.1+
+- [ ] Light theme support
+- [ ] Support for different locales
 
 Released under the Apache License
