@@ -52,14 +52,19 @@ public class ZeroTopPaddingTextView extends TextView {
     }
 
     public void updatePadding() {
-        float paddingRatio = NORMAL_FONT_PADDING_RATIO;
-        float bottomPaddingRatio = NORMAL_FONT_BOTTOM_PADDING_RATIO;
-        if (getTypeface().equals(SAN_SERIF_BOLD)) {
-            paddingRatio = BOLD_FONT_PADDING_RATIO;
-            bottomPaddingRatio = BOLD_FONT_BOTTOM_PADDING_RATIO;
-        }
-        // no need to scale by display density because getTextSize() already returns the font
-        // height in px
+    	float paddingRatio = NORMAL_FONT_PADDING_RATIO;
+    	float bottomPaddingRatio = NORMAL_FONT_BOTTOM_PADDING_RATIO;
+    	
+    	//Try to add the custom font paddings, may fail on older devices.
+    	try{
+    		if (getTypeface().equals(SAN_SERIF_BOLD)) {
+    			paddingRatio = BOLD_FONT_PADDING_RATIO;
+    			bottomPaddingRatio = BOLD_FONT_BOTTOM_PADDING_RATIO;
+    		}
+    	}catch(Exception e){
+    	}
+    	// no need to scale by display density because getTextSize() already returns the font
+    	// height in px
         setPadding(0, (int) (-paddingRatio * getTextSize()), mPaddingRight,
                 (int) (-bottomPaddingRatio * getTextSize()));
     }

@@ -66,6 +66,27 @@ public class MainActivity extends FragmentActivity implements TimePickerDialogFr
         fragment.show(ft, "time_dialog");
 	}
 	
+	/**
+	 * Opens a DialogFragment with a preset time
+	 * @param v
+	 */
+	public void opendialog_preset(View v){
+		FragmentManager manager = getSupportFragmentManager();
+        final FragmentTransaction ft = manager.beginTransaction();
+        //Close pre-existing dialogs if any
+        final Fragment prev = manager.findFragmentByTag("time_dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        final TimePickerDialogFragment fragment = TimePickerDialogFragment.newInstance();
+        Bundle b = new Bundle();
+        b.putBoolean("hours_24", true);
+        b.putInt("hour", 12);
+        b.putInt("minute", 12);
+        fragment.setArguments(b);
+        fragment.show(ft, "time_dialog");
+	}
+	
 	@Override
 	public void onDialogTimeSet(int hourOfDay, int minute) {
 		Toast.makeText(getApplicationContext(), hourOfDay+":" +minute, Toast.LENGTH_LONG).show();

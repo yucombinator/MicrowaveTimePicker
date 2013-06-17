@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -55,6 +55,7 @@
         <item name="android:textSize">@dimen/dialpad_font_size</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/key_color</item>
     </style>
 
     <style name="dialpad_ampm" parent="dialpad">
@@ -63,6 +64,7 @@
     <style name="dialog_button">
         <item name="android:textSize">@dimen/dialog_button_font_size</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/key_color</item>
     </style>
 
     <style name="tablet_dialpad">

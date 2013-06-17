@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 The Android Open Source Project
+ * Copyright (C) 2008 The Android Open Source Project / Yu Chen Hou
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -585,5 +586,24 @@ public class TimePicker extends TimerSetupView implements Button.OnClickListener
 	public void set24Hours(boolean b) {
 		mIs24HoursMode = true;
 		onFinishInflate();
+	}
+	/**
+	 * Set the time on the TimePicker
+	 * @param hourOfDay in 24 hours format (5PM = 17) max value:24
+	 * @param minutes max value:59
+	 */
+	public void setTime(int hourOfDay, int minutes){
+		
+		if(hourOfDay<=24&&minutes<60){
+		mInput[0] = minutes%10;
+		mInput[1] = minutes/10;
+		mInput[2] = hourOfDay%10;
+		mInput[3] = hourOfDay/10;
+		mInputPointer=3;
+		}else{
+			Log.e("TimePicker","Invalid Values in setTime()");
+		}
+		
+		updateKeypad();
 	}
 }

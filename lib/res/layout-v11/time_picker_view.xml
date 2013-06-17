@@ -19,7 +19,8 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
         <com.icechen1.microwavetimepicker.TimerView
             android:id="@+id/timer_time_text"
             android:layout_width="0dip"
@@ -27,8 +28,18 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/medium_font_padding"
             android:paddingBottom="@dimen/medium_font_padding"
-            android:gravity="top|center_horizontal"
-            android:baselineAligned="false">
+            android:paddingLeft="@dimen/timer_padding_left"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:gravity="top">
+            <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
+                android:id="@+id/hours_tens"
+                android:singleLine="true"
+                android:ellipsize="none"
+                style="@style/medium_bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/clock_white"/>
             <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
                 android:id="@+id/hours_ones"
                 android:singleLine="true"
@@ -39,13 +50,11 @@
                 android:textColor="@color/clock_white"/>
 
             <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
-                android:id="@+id/hours_label"
+                android:id="@+id/hours_seperator"
                 android:singleLine="true"
                 android:ellipsize="none"
-                style="@style/label"
-                android:layout_gravity="top"
-                android:contentDescription="@string/hours_label_description"
-                android:text="@string/hours_label"
+                style="@style/medium_light"
+                android:text="@string/time_picker_time_seperator"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="@color/clock_white"/>
@@ -58,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="@color/clock_white"/>
-
             <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
                 android:id="@+id/minutes_ones"
                 android:singleLine="true"
@@ -67,36 +75,16 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="@color/clock_white"/>
+
             <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
-                android:id="@+id/minutes_label"
+                android:id="@+id/ampm_label"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:singleLine="true"
                 android:ellipsize="none"
                 style="@style/label"
-                android:contentDescription="@string/minutes_label_description"
-                android:text="@string/minutes_label"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textColor="@color/clock_white"/>
-
-            <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
-                android:id="@+id/seconds"
-                android:singleLine="true"
-                android:ellipsize="none"
-                style="@style/medium_light"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textColor="@color/clock_white"/>
-
-            <com.icechen1.microwavetimepicker.ZeroTopPaddingTextView
-                android:id="@+id/seconds_label"
-                android:singleLine="true"
-                android:ellipsize="none"
-                style="@style/label"
-                android:layout_gravity="top"
-                android:contentDescription="@string/seconds_label_description"
-                android:text="@string/seconds_label"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:gravity="top"
+                android:text="@string/time_picker_ampm_label"
                 android:textColor="@color/clock_white"/>
 
         </com.icechen1.microwavetimepicker.TimerView>
@@ -106,7 +94,6 @@
             android:layout_weight="1"
             android:gravity="center"
             android:layout_gravity="center"
-            android:paddingBottom="@dimen/body_font_padding"
             android:src="@drawable/ic_backspace"
             android:background="@drawable/item_background"
             android:contentDescription="@string/timer_delete"
@@ -115,7 +102,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dip"
-        android:layout_marginBottom="8dip"
         android:background="#28ffffff" />
     <include layout="@layout/three_keys_view"
         android:id="@+id/first" />
@@ -126,11 +112,6 @@
     <include layout="@layout/three_keys_view"
         android:id="@+id/third"/>
 
-    <include layout="@layout/three_keys_view"
+    <include layout="@layout/three_keys_view_ampm"
         android:id="@+id/fourth" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:layout_marginTop="16dip" />
-</LinearLayout>
+ </LinearLayout>

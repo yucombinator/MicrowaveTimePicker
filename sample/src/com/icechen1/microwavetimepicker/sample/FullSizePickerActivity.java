@@ -1,5 +1,7 @@
 package com.icechen1.microwavetimepicker.sample;
 
+import com.icechen1.microwavetimepicker.TimePicker;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;

@@ -12,11 +12,17 @@
         android:text="Open Dialog(24Hours)"
         android:onClick="opendialog" />
         <Button
-        android:id="@+id/opendialog"
+        android:id="@+id/opendialog2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Open Dialog(AM/PM)"
         android:onClick="opendialog_am" />
+        <Button
+        android:id="@+id/opendialog3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Dialog with a preset time"
+        android:onClick="opendialog_preset" />
 
     <Button
         android:id="@+id/viewonly"

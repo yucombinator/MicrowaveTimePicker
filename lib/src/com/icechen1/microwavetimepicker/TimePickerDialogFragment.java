@@ -75,14 +75,21 @@ public class TimePickerDialogFragment extends DialogFragment {
     	mPicker = (TimePicker) v.findViewById(R.id.time_picker);
     	mPicker.setSetButton(mSet);
     	Bundle bundle=getArguments();
+    	int hourOfDay;
+    	int minute = 0;
+    	//Set up the TimePicker
     	if(bundle!=null){
     		if (bundle.containsKey("hours_24")){
     			hours_24 = bundle.getBoolean("hours_24");
+    			mPicker.set24Hours(true);
     		}
-    	}
-
-    	if(hours_24){
-    		mPicker.set24Hours(true);
+    		if (bundle.containsKey("hour")){
+    			hourOfDay = bundle.getInt("hour");
+        		if (bundle.containsKey("minute")){
+        			minute = bundle.getInt("minute");
+        		}
+        		mPicker.setTime(hourOfDay, minute);
+    		}
     	}
     	mSet.setOnClickListener(new View.OnClickListener() {
     		@Override
