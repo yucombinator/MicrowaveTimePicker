@@ -1,7 +1,8 @@
 MicrowaveTimePicker
 ===================
 
-Backport of the new TimePicker found in the AlarmClock app in Android 4.2+
+Backport of the new "Microwave-style" TimePicker found in the AlarmClock app in Android 4.2+.
+It's easier to use than the old TimePicker, and looks awesome, too.
 
 Use
 ====
