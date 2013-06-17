@@ -41,7 +41,8 @@ public class MainActivity extends FragmentActivity implements TimePickerDialogFr
 //...
     @Override
 	public void onDialogTimeSet(int hourOfDay, int minute) {
-    //code goes here
+    	//code goes here
+    }
 //...
 		
 	}
@@ -57,4 +58,5 @@ See the sample project for more information
 To Do
 =====
 -A Light Theme that works in Holo.Light
+
 -Auto Locale Detection
