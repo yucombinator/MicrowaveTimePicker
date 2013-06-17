@@ -3,8 +3,9 @@ MicrowaveTimePicker
 
 Backport of the new "Microwave-style" TimePicker found in the AlarmClock app in Android 4.2+.
 It's easier to use than the old TimePicker, and looks awesome, too.
-![TimePickerDialogFragment](/ss1.png "TimePickerDialogFragment")
-![TimePicker](/ss2.png "TimePicker")
+
+![TimePickerDialogFragment](/ss1.png "TimePickerDialogFragment")![TimePicker](/ss2.png "TimePicker")
+
 Use
 ====
 Import the library project to your app
