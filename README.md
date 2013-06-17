@@ -68,5 +68,5 @@ To Do
 - [ ] Light theme support
 - [ ] Support for different locales
 - [ ] There is a weird issue with the padding on the bold font in Android 2.1 - 2.3, I haven't been able to fix it, but if anyone wants to take a look...
-- 
+
 Released under the Apache License
