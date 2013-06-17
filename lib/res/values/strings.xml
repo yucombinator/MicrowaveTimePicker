@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MicrowaveTimepicker</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
+    <string name="hours_label">h</string>
+    <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
+    <string name="minutes_label">m</string>
+    <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
+    <string name="seconds_label">s</string>
+    <!-- Accessibility strings -->
+    <string name="hours_label_description">hours</string>
+    <string name="minutes_label_description">minutes</string>
+    <string name="seconds_label_description">seconds</string>
+    <!-- Describes the purpose of the button to delete a timer. -->
+    <string name="timer_delete">Delete</string>
+    <string name="zero">0</string>  
+    <!-- Textual content of the button to discard the current dialog values and close the dialog -->
+    <string name="time_picker_cancel">Cancel</string>
+    <!-- Textual content of the button to update an alarm with the current dialog values -->
+    <string name="time_picker_set">OK</string>
+    <string name="time_picker_time_seperator">:</string>
+    <!--  place holder for am/pm label when it is not set -->
+    <string name="time_picker_ampm_label">--</string>
+    <!-- add 00 as minutes to the time when pressing this button -->
+    <string name="time_picker_00_label">:00</string>
+    <!-- add 30 as minutes to the time when pressing this button -->
+    <string name="time_picker_30_label">:30</string>
+</resources>
