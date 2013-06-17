@@ -50,7 +50,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialogFr
 
 }
 ```
-
+If you are experiencing crashes, you may have to copy the /assets/font files from the library to the root of your project.
 
 
 
